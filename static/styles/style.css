@@ -1,9 +1,14 @@
+body{
+    background-color: #DEBA69;
+}
+
 .home{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    color: #007172;
 }
 
 .join{
@@ -19,4 +24,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.error{
+    color: #f01e2c;
 }

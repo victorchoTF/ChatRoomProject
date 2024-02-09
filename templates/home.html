@@ -29,5 +29,10 @@
     <button type="submit" name="create" class="create">
         Create a Room
     </button>
+    {% if error %}
+        <h3 class="error">
+            {{erorr}}
+        </h3>
+    {%endif%}
 </form>
 {% endblock %}

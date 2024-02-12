@@ -49,7 +49,7 @@ def room():
     if not room or not name or room not in room_codes:
         return redirect(url_for("home"))
     
-    return render_template("room.html", room=room)
+    return render_template("room.html", room=room, messages=room_codes[room]["messages"])
 
 @socketio.on("connect")
 def connect(auth):
@@ -89,6 +89,7 @@ def disconnect():
 @socketio.on("message")
 def message(data):
     room = session.get("room")
+    name = session.get("name")
 
     if room not in room_codes:
         return
@@ -100,6 +101,7 @@ def message(data):
 
     send(content, to=room)
     room_codes[room]["messages"].append(content)
+    print(f"{name} said: {content['message']}")
 
 
 if __name__ == "__main__":

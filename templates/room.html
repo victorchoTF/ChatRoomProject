@@ -30,13 +30,15 @@
         const content = `
         <div class="text">
             <span>
-                <strong>
+                <b>
                     ${name}
-                </strong>
+                </b>
                 : ${msg}
             </span>
-            <span class="muted">
-                ${new Date().toLocaleString()}
+            <span class="date">
+                <b>
+                    ${new Date().toLocaleString()}
+                </b>
             </span>
         </div>
         `;
@@ -58,4 +60,11 @@
         message.value = "";
     }
 </script>
+
+{% for msg in messages %}
+    <script type="text/javascript">
+        createMessage("{{msg.name}}", "{{msg.message}}");
+    </script>
+{% endfor %}
+
 {% endblock %}

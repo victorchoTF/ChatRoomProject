@@ -1,3 +1,3 @@
 from typing import Dict, List
 
-room_codes: Dict[str, List[str] | int] = {}
+room_codes: Dict[str, Dict[str, List[str] | int]] = {}

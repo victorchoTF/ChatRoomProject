@@ -1,5 +1,5 @@
 body{
-    background-color: #DEBA69;
+    background-color: #696969;
 }
 
 .home{
@@ -8,7 +8,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    color: #007172;
+    color: whitesmoke;
 }
 
 .join{
@@ -28,4 +28,34 @@ body{
 
 .error{
     color: #f01e2c;
+}
+
+.message-box{
+    border: 2px lightgrey solid;
+    border-radius: 10px;
+    background-color: darkgray;
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.messages{
+    overflow-y: scroll;
+    flex: 1;
+    width: 100%;
+}
+
+.input-field{
+    padding: 10px;
+    display: flex;
+}
+
+h2{
+    text-align: center;
+}
+
+.message{
+    width: 100%;
 }

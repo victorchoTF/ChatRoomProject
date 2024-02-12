@@ -5,7 +5,7 @@
         Enter Chat Room
     </h3>
     <div>
-        <label for="">
+        <label>
             Name:
         </label>
         <input 
@@ -22,7 +22,7 @@
             name="code" 
             value="{{code}}"
         />
-        <button type="submit" class="join">
+        <button type="submit" name="join">
             Join
         </button>
     </div>
@@ -31,8 +31,8 @@
     </button>
     {% if error %}
         <h3 class="error">
-            {{erorr}}
+            {{error}}
         </h3>
-    {%endif%}
+    {% endif %}
 </form>
 {% endblock %}
